@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt ./
 
 RUN python -m venv venv \
-	&& /app/venv/bin/python -m pip install -r requirements.txt
+    && /app/venv/bin/python -m pip install --disable-pip-version-check -r requirements.txt
 
 COPY app.py entrypoint.sh ./
 

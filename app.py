@@ -1,8 +1,13 @@
+import os
+
 import flask
 
-app = flask.Flask(__name__)
+app = flask.Flask(os.environ.get("APP", "flaskapp"))
 
 
 @app.route("/")
 def hello():
-    return "Hello world!\n"
+    return flask.jsonify(
+        app=app.name,
+        status="up",
+    )
