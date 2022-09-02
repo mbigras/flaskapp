@@ -10,4 +10,7 @@ def hello():
     return flask.jsonify(
         app=app.name,
         status="up",
+        features=[
+            "feature1",
+        ],
     )
