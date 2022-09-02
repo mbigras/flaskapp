@@ -13,5 +13,6 @@ def hello():
         features=[
             "feature1",
             "feature2",
+            "feature3",
         ],
     )
