@@ -12,5 +12,6 @@ def hello():
         status="up",
         features=[
             "feature1",
+            "feature2",
         ],
     )
